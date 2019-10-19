@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
+body {
+    margin: 0px;
+    overflow-x: hidden;
+    background-color: #f2f2f2;
+}
+
+#hero {
+    top: 0;
+    bottom: 0;
+    position: relative;
+}
+
+#hero h1, h2 {
+    font-family: 'Arimo', sans-serif;
+    color: white;
+    animation-name: revealText;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+}
+
+#hero .content {
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+}
+
+#hero h1 {
+    text-align: center;
+    font-size: 5rem;
+}
+
+#hero h2 {
+    font-size: 2rem;
+}
+
+#hero .bg-video {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100vh;
+}
+
+@keyframes revealText {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+#feature {
+    /* position:fixed;
+    overflow-y:scroll;
+    overflow-x:hidden; */
+    position: relative;
+}
+
+#feature img {
+    position: absolute;
+    height: 700px;
+    bottom: 0px;
+    left: 90%;
+    transform: translateX(-50%);
+    opacity: 0.9;
+    z-index: -1;
+}
+
+#hfeature .content-left {
+    position: relative;
+}
+
+#feature .content-left h2 {
+    /* transform: translate(50%, 50%); */
+    font-size: 4rem;
+    color: white;
+    background-color: blue;
+    max-width: 95%;
+}
+
+#feature .content-left h3 {
+    max-width: 80%;
+    font-size: 3.5rem;
+    font-family: 'Arimo', sans-serif;
+    line-height: 80px;
+    margin-left: 10px;
+}
+
+.leftEnter {
+    animation: leftEnter 2s;
+}
+
+.rightEnter {
+    animation: rightEnter 2s;
+}
+
+@keyframes leftEnter {
+    0% {
+        transform: translate(-200%);
+    }
+    50% {
+        transform: translate(-100%);
+    }
+}
+
+@keyframes rightEnter {
+    0% {
+        transform: translate(200%);
+    }
+    50% {
+        transform: translate(100%);
+    }
+}
+
+#work {
+    padding: 10px;
+}
+
+#work h1 {
+    font-size: 5rem;
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+}
+
+#work h1::after {
+    position: absolute;
+    content: '';
+    width: 20%;
+    background-color: red;
+    height: 5px;
+    transform: translate(-80%, 2000%);
+    transition: width 2s;
+}
+
+#work h1:hover::after {
+    width: 60%;
+}
+
+#work .row {
+    display: flex;
+    justify-content: space-around;
+}
+
+#work .img-1 {
+    max-width: 20%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+#work .img-2 {
+    max-width: 20%;
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+#work .img-3 {
+    max-width: 20%;
+    max-height: 300px;
+    border-radius: 10px;
+}
