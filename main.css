@@ -8,14 +8,14 @@ body {
 #hero {
     top: 0;
     bottom: 0;
+    right: 0;
     position: relative;
 }
 
 #hero h1, h2 {
     font-family: 'Roboto', sans-serif;
     color: white;
-    animation-name: revealText;
-    animation-duration: 2s;
+    /* animation-name: revealText; */
     animation-timing-function: linear;
 }
 
@@ -41,21 +41,32 @@ body {
     right: 0;
     bottom: 0;
     left: 0px;
-    width: 105%;
-    padding-left: 0!important;
-    padding-right: 0!important;
-    margin-left: 0!important;
-    margin-right: 0!important;
+    width: 105%!important;
+    padding: 0;
+    /* margin-left: 0!important;
+    margin-right: 0!important; */
+}
+
+.revealText {
+    animation: revealText 2s;
 }
 
 @keyframes revealText {
     0% {
+        position: absolute;
         opacity: 0;
-        transform: translateY(20px);
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -60%);
+        transform: translate(-50%, 20px);
     }
     100% {
+        position: absolute;
         opacity: 1;
-        transform: translateY(0px);
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -60%);
+        
     }
 }
 
@@ -103,11 +114,11 @@ body {
 }
 
 .leftEnter {
-    animation: leftEnter 1s;
+    animation: leftEnter 1.5s;
 }
 
 .rightEnter {
-    animation: rightEnter 1s;
+    animation: rightEnter 2s;
 }
 
 @keyframes leftEnter {
@@ -165,11 +176,10 @@ body {
 }
 
 #work img {
-    position: absolute;
+    position: relative;
     max-width: 30%;
     max-height: 400px;
     border-radius: 10px;
-    z-index: -5;
 }
 
 .ml15 {
@@ -183,11 +193,11 @@ body {
       position: absolute;
     /* display: inline-block; */
     line-height: 1em;
-    transform: translateY(100px);
+    transform: translateY(-250px);
   }
   .word1 { 
+    z-index: 2;
     position: absolute;
-    animation-duration: 1s;
     left: 16%;
   }
     .slidein{
@@ -196,32 +206,128 @@ body {
 
   @keyframes slidein {
     from {
+        z-index: 2;
         left: 33%;
       opacity: 0;
     }
   
     to {
+        z-index: 2;
       left: 16%;
       opacity: 1;
     }
   }
   .word2 {
+    z-index: 2;
     position: absolute;
     left: 67%;
-    animation-duration: 1s;
   }
    .slideout {
        animation: slideout 2s;
   }
   @keyframes slideout {
     from {
+      z-index: 2;
       left: 50%;
       opacity: 0;
     }
   
     to {
+      z-index: 2;
       left: 67%;
       opacity: 1;
       float:right;
     }
+  }
+
+  #studios {
+      position: relative;
+  }
+  .service {
+    border: 1px solid;
+    transition: box-shadow 0.6s ease-out;
+    box-shadow: 0.8px 0.9px 3px grey;
+  }
+  
+  .card:hover {
+    box-shadow: 1px 8px 20px grey;
+    transition: box-shadow 0.6s ease-in;
+  }
+  
+  .service-lg {
+    height: 550px !important;
+  }
+  
+  .service-lg .title {
+    font-size: 3rem !important;
+  }
+  
+  .service {
+    min-height: 500px;
+    height:auto;
+  }
+  
+  .service:hover {
+    box-shadow: 5px 5px #888888;
+  }
+  
+  .service .title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .service .desc {
+    padding: 15px 15px;
+    font-size: 1.1rem;
+  }
+  
+  .service img {
+    width: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    transition: clip-path 1s;
+  }
+  
+  .service:hover img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+  
+  .welcome {
+    background-image: url('assets/drawing.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  #footer {
+    position: absolute;
+    height: 200px;
+    align-content: center;
+  }
+  
+  .footer-google,
+  .footer-twitter,
+  .footer-facebook {
+    color: grey;
+    transform: scale(2);
+    padding: 4px;
+  }
+  
+  .footer-google:hover {
+    padding: 4px;
+    align-content: center;
+    color: pink;
+  }
+  
+  .footer-facebook:hover {
+    padding: 4px;
+    align-content: center;
+    color: blue;
+  }
+  
+  .footer-twitter:hover {
+    padding: 4px;
+    align-content: center;
+    color: skyblue;
   }
