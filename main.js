@@ -94,3 +94,11 @@ $(".word2").inViewport(function(px) {
     $(this).removeClass("slideout");
   }
 });
+$(".content").inViewport(function(px) {
+  if(px > 0) {
+    $(this).addClass("revealText");
+  }
+  else{
+    $(this).removeClass("revealText");
+  }
+});
