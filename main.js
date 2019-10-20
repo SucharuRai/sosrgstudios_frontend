@@ -1,51 +1,4 @@
-// (function($) {
-
-//     /**
-//      * Copyright 2012, Digital Fusion
-//      * Licensed under the MIT license.
-//      * http://teamdf.com/jquery-plugins/license/
-//      *
-//      * @author Sam Sehnert
-//      * @desc A small plugin that checks whether elements are within
-//      *     the user visible viewport of a web browser.
-//      *     only accounts for vertical position, not horizontal.
-//      */
-  
-//     $.fn.visible = function(partial) {
-      
-//         var $t            = $(this),
-//             $w            = $(window),
-//             viewTop       = $w.scrollTop(),
-//             viewBottom    = viewTop + $w.height(),
-//             _top          = $t.offset().top,
-//             _bottom       = _top + $t.height(),
-//             compareTop    = partial === true ? _bottom : _top,
-//             compareBottom = partial === true ? _top : _bottom;
-      
-//       return ((compareBottom <= viewBottom) && (compareTop >= viewTop));
-  
-//     };
-      
-//   })(jQuery);
-
-//   function createEffect() {
-//     $(".word1").addClass("slidein");
-//     $(".word2").addClass("slideout");
-//   }
-
-//   function createDelay() {
-//     window.setTimeout(createEffect, 5000);
-//   }
-
-//   $(window).scroll(function(event) {
-  
-//     $(".content-left").addClass("leftEnter");
-//     $("#feature img").addClass("rightEnter");
-//     createDelay();
-//     // $(".word1").addClass("animated bounce infinite");
-//   });
-
-;(function($, win) {
+(function($, win) {
   $.fn.inViewport = function(cb) {
      return this.each(function(i,el) {
        function visPx(){
@@ -60,7 +13,7 @@
   };
 }(jQuery, window));
 
-$(".content-left").inViewport(function(px) {
+$("#feature .content-left").inViewport(function(px) {
   if(px > 0) {
     $(this).addClass("leftEnter");
   }
