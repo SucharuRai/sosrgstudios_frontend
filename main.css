@@ -1,10 +1,379 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
-body {
+body,html{
+  overflow-x: hidden;
+}
+@media (max-width: 449px) {
+  #hero {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+/* 
+#hero h1, h2 {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    /* animation-name: revealText; */
+    /* animation-timing-function: linear;
+} */
+
+#hero .bg-video {
+  position: absolute;
+  min-height: 800px;
+  min-width: 100%;
+  top: 0%;
+  object-fit: cover;
+  left: 0%;
+  padding: 0px !important;
+  margin: 0px !important;
+  /* margin-left: -50px; */
+  overflow: hidden!important;
+}
+.content {
+    position: relative;
+    left: 50%;
+    top: 40%;
+    color: white!important;
+    transform: translate(-50%, -50%);
+}
+
+#hero h1 {
+    text-align: center;
+    font-size: 4rem;
+}
+
+#hero h2 {
+  text-align: center;
+    font-size: 1.6rem;
+}
+
+.revealText {
+    animation: revealText 2s;
+}
+
+@keyframes revealText {
+    0% {
+        position: relative;
+        opacity: 0;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, 20px);
+    }
+    100% {
+        position: relative;
+        opacity: 1;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+#feature {
+    position: absolute;
+    top: 800px;
+    padding: 0;
+    text-overflow: ellipsis;
+    max-height: 50%;
+}
+#feature .content-left {
+    position: relative;
+    padding: 0!important;
+    margin: 0!important;
+    width: 100%!important;
+}
+#feature .content-left span h2 {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: grey;
+    padding-left: 10px;
+}
+#feature .content-left h3 {
+    max-width: 80%;
+    font-size: 1.5rem;
+    font-family: 'Arimo', sans-serif;
+    margin-left: 10px;
+    padding-left: 10px;
+    color: grey;
+}
+
+#feature img {
+  position: relative;
+  height: 200px;
+  top: -180px;
+  left: 90%;
+  transform: translateX(-50%);
+  opacity: 0.9;
+}
+
+.leftEnter {
+    animation: leftEnter 1.5s;
+}
+
+.rightEnter {
+    animation: rightEnter 2s;
+}
+
+@keyframes leftEnter {
+    0% {
+        transform: translate(-200%);
+    }
+    50% {
+        transform: translate(-100%);
+    }
+}
+
+@keyframes rightEnter {
+    0% {
+        transform: translate(200%);
+    }
+    50% {
+        transform: translate(100%);
+    }
+}
+
+#work {
+    padding: 30px;
+    position: absolute;
+    top: 1050px;
+}
+
+#work h1 {
+    font-size: 2.5rem;
+    font-family: 'Arimo', sans-serif;
+    text-align: center;
+}
+#work h2{
+    text-align: center;
+    color: grey;
+    margin-top: 100px;
+}
+
+#work h1::after {
+    position: absolute;
+    left: 50%;
+    content: '';
+    width: 30%;
+    background-color: red;
+    height: 5px;
+    transform: translate(-50%, 60px);
+    transition: width 2s;
+}
+
+#work h1:hover::after {
+    width: 80%;
+}
+
+#work .row {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#work img {
+    position: relative;
+    left:5px;
+    max-width: 55%;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.ml15 {
+    font-weight: 800;
+    font-size: 1.05rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  .ml15 .word1, .word2 {
+      position: absolute;
+    /* display: inline-block; */
+    line-height: 1em;
+    transform: translateY(-130px);
+  }
+  .word1 { 
+    z-index: 2;
+    position: absolute;
+    left: 12%;
+  }
+    .slidein{
+        animation: slidein 2s;
+    }
+
+  @keyframes slidein {
+    from {
+        z-index: 2;
+        left: 33%;
+      opacity: 0;
+    }
+  
+    to {
+        z-index: 2;
+      left: 12%;
+      opacity: 1;
+    }
+  }
+  .word2 {
+    z-index: 2;
+    position: absolute;
+    left: 78%;
+  }
+   .slideout {
+       animation: slideout 2s;
+  }
+  @keyframes slideout {
+    from {
+      z-index: 2;
+      left: 50%;
+      opacity: 0;
+    }
+  
+    to {
+      z-index: 2;
+      left: 78%;
+      opacity: 1;
+      float:right;
+    }
+  }
+
+  #studios {
+      position: absolute;
+      top: 1450px;
+  }
+  #workid {
+    margin-top: 25px;
+  }
+  #workid h1 {
+      font-size: 2.0rem;
+      font-family: 'Arimo', sans-serif;
+      text-align: center;
+  }
+  #workid h1::after {
+      position: absolute;
+      left: 50%;
+      content: '';
+      width: 30%;
+      background-color: red;
+      height: 4px;
+      transform: translate(-50%, 50px);
+      transition: width 2s;
+  }
+  #workid h1:hover::after {
+      width: 80%;
+  }
+  
+  .out-card {
+    padding: 20px;
+  }
+  .service {
+    border: 1px solid;
+    transition: box-shadow 0.6s ease-out;
+    box-shadow: 0.8px 0.9px 3px grey;
+  }
+  
+  .card:hover {
+    box-shadow: 1px 8px 20px grey;
+    transition: box-shadow 0.6s ease-in;
+  }
+  
+  .service-lg {
+    height: 550px !important;
+  }
+  
+  .service-lg .title {
+    font-size: 3rem !important;
+  }
+  
+  .service {
+    min-height: 500px;
+    height:auto;
+  }
+  
+  .service:hover {
+    box-shadow: 5px 5px #888888;
+  }
+  
+  .service .title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .service .desc {
+    padding: 15px 15px;
+    font-size: 1.1rem;
+  }
+  
+  .service img {
+    width: 100%;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
+    transition: clip-path 1s;
+  }
+  
+  .service:hover img {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  }
+  
+  .welcome {
+    background-image: url('assets/drawing.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .welcome a {
+    background-color: white;
+  }
+
+  #footer {
+    position: absolute;
+    height: 500px;
+    top: 5500px;
+    align-content: center;
+    margin-bottom: 50px;
+  }
+  
+  .footer-google,
+  .footer-twitter,
+  .footer-facebook {
+    color: grey;
+    transform: scale(2);
+    padding: 4px;
+  }
+  
+  .footer-google:hover {
+    padding: 4px;
+    align-content: center;
+    color: pink;
+  }
+  
+  .footer-facebook:hover {
+    padding: 4px;
+    align-content: center;
+    color: blue;
+  }
+  
+  .footer-twitter:hover {
+    padding: 4px;
+    align-content: center;
+    color: skyblue;
+  }
+  #footer .text {
+    color: grey;
+  }
+}
+@media (min-width: 450px) {
+  body {
     margin: 0px;
     overflow-x: hidden;
     background-color: #f2f2f2;
 }
-
 #hero {
     top: 0;
     bottom: 0;
@@ -57,7 +426,6 @@ body {
         opacity: 0;
         left: 50%;
         top: 40%;
-        transform: translate(-50%, -60%);
         transform: translate(-50%, 20px);
     }
     100% {
@@ -243,6 +611,34 @@ body {
   #studios {
       position: relative;
   }
+  #workid {
+    margin-top: 25px;
+  }
+  #workid h1 {
+      font-size: 3.5rem;
+      font-weight: 600;
+      letter-spacing: 0.3rem;
+      word-spacing: 0.8rem;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+  }
+  #workid h1::after {
+      position: absolute;
+      margin-top: 15px;
+      left: 50%;
+      content: '';
+      width: 30%;
+      background-color: red;
+      height: 4px;
+      transform: translate(-50%, 50px);
+      transition: width 2s;
+  }
+  #workid h1:hover::after {
+      width: 60%;
+  }
+  .out-card {
+    padding: 60px;
+  }
   .service {
     border: 1px solid;
     transition: box-shadow 0.6s ease-out;
@@ -299,19 +695,27 @@ body {
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
   }
+  
+  .welcome a {
+    background-color: white;
+  }
 
   #footer {
     position: absolute;
-    height: 200px;
+    height: 300px;
     align-content: center;
+    margin-top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
   }
   
   .footer-google,
   .footer-twitter,
   .footer-facebook {
     color: grey;
-    transform: scale(2);
+    transform: scale(4);
     padding: 4px;
+    margin-bottom: 20px;
   }
   
   .footer-google:hover {
@@ -331,21 +735,20 @@ body {
     align-content: center;
     color: skyblue;
   }
-
-.form-title {
-  text-align: center;
-  font-size: 4rem;
-  margin: 20px;
-  animation: revealForm 2s;
+}
+.nav-item {
+  margin-right: 20px;
 }
 
-@keyframes revealForm {
-  from {
-    opacity: 0;
-    transform: translateY(500%);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0%);
-  }
+.nav-item a
+{
+  color: #FFF;
+  text-decoration: none;
+  font: 20px Raleway;
+  position: relative;
+  z-index: 0;
+  cursor: pointer;
+}
+.navbar {
+  background-color: rgba(247, 246, 246, 1) !important;
 }
