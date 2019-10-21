@@ -127,10 +127,10 @@ body, html {
       transform: translate(100%);
     }
   }
-  #work {
+  #work { 
     padding: 30px;
     position: absolute;
-    top: 1050px;
+    top: 850px; /* Since mic image is not there, we reduced every px by 200*/
   }
   #work h1 {
     font-size: 2.5rem;
@@ -222,7 +222,7 @@ body, html {
   }
   #studios {
     position: absolute;
-    top: 1450px;
+    top: 1250px;
   }
   #workid {
     margin-top: 25px;
@@ -300,7 +300,7 @@ body, html {
   #footer {
     position: absolute;
     max-height: 500px;
-    top: 5900px;
+    top: 5700px;
     left: 50%;
     transform: translateX(-50%);
     align-content: center;
