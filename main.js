@@ -63,3 +63,13 @@ $(".content").inViewport(function(px) {
     $(this).removeClass("revealText");
   }
 });
+
+$(".service").inViewport(function(px) {
+  if(px > 0) {
+    $(this).removeClass("opacityExit");
+    $(this).addClass("opacityEnter");
+  } else {
+    $(this).removeClass("opacityEnter");
+    $(this).addClass("opacityExit");
+  }
+})
