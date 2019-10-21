@@ -13,6 +13,14 @@
   };
 }(jQuery, window));
 
+$('#feature').inViewport(function(px) {
+  if(px > 0) {
+    
+  } else {
+
+  }
+})
+
 $("#feature .content-left").inViewport(function(px) {
   if(px > 0) {
     $(this).addClass("leftEnter");

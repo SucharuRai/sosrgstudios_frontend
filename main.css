@@ -334,7 +334,9 @@ body,html{
   #footer {
     position: absolute;
     height: 500px;
-    top: 5500px;
+    top: 5700px;
+    left: 50%;
+    transform: translateX(-50%);
     align-content: center;
     margin-bottom: 50px;
   }
@@ -345,6 +347,7 @@ body,html{
     color: grey;
     transform: scale(2);
     padding: 4px;
+    margin-right: 10px;
   }
   
   .footer-google:hover {
@@ -365,9 +368,11 @@ body,html{
     color: skyblue;
   }
   #footer .text {
+    margin-top: 40px;
     color: grey;
   }
 }
+/* ================================================================== */
 @media (min-width: 450px) {
   body {
     margin: 0px;
@@ -538,7 +543,7 @@ body,html{
 }
 
 #work .row {
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -552,7 +557,7 @@ body,html{
 
 .ml15 {
     font-weight: 800;
-    font-size: 3.5rem;
+    font-size: 5rem;
     text-transform: uppercase;
     letter-spacing: 0.5em;
   }
@@ -588,7 +593,7 @@ body,html{
   .word2 {
     z-index: 2;
     position: absolute;
-    left: 67%;
+    left: 63%;
   }
    .slideout {
        animation: slideout 2s;
@@ -602,7 +607,6 @@ body,html{
   
     to {
       z-index: 2;
-      left: 67%;
       opacity: 1;
       float:right;
     }
@@ -714,24 +718,25 @@ body,html{
   .footer-facebook {
     color: grey;
     transform: scale(4);
-    padding: 4px;
-    margin-bottom: 20px;
+    /* padding: 4px; */
+    margin-bottom: 50px;
+    margin-right: 20px!important;
   }
   
   .footer-google:hover {
-    padding: 4px;
+    /* padding: 4px; */
     align-content: center;
     color: pink;
   }
   
   .footer-facebook:hover {
-    padding: 4px;
+    /* padding: 4px; */
     align-content: center;
     color: blue;
   }
   
   .footer-twitter:hover {
-    padding: 4px;
+    /* padding: 4px; */
     align-content: center;
     color: skyblue;
   }
