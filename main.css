@@ -127,10 +127,10 @@ body, html {
       transform: translate(100%);
     }
   }
-  #work {
+  #work { 
     padding: 30px;
     position: absolute;
-    top: 1050px;
+    top: 850px; /* Since mic image is not there, we reduced every px by 200*/
   }
   #work h1 {
     font-size: 2.5rem;
@@ -222,7 +222,7 @@ body, html {
   }
   #studios {
     position: absolute;
-    top: 1450px;
+    top: 1250px;
   }
   #workid {
     margin-top: 25px;
@@ -299,7 +299,7 @@ body, html {
   }
   #footer {
     position: absolute;
-    height: 500px;
+    max-height: 500px;
     top: 5700px;
     left: 50%;
     transform: translateX(-50%);
@@ -334,7 +334,7 @@ body, html {
 }
 
 /* ================================================================== */
-
+/*SHALL BE 900 px ....   HAVE TO CHANGE THE CSS FOR px IN BETWEEN 450 AND 900*/
 @media (min-width: 450px) {
   body {
     margin: 0px;
@@ -496,7 +496,7 @@ body, html {
   }
   .ml15 {
     font-weight: 800;
-    font-size: 5rem;
+    font-size: 3rem!important;
     text-transform: uppercase;
     letter-spacing: 0.5em;
     color: white;
@@ -510,7 +510,7 @@ body, html {
   .word1 {
     z-index: 2;
     position: absolute;
-    left: 16%;
+    left: 22%;
   }
   .slidein {
     animation: slidein 2s;
@@ -523,7 +523,7 @@ body, html {
     }
     to {
       z-index: 2;
-      left: 16%;
+      left: 22%;
       opacity: 1;
     }
   }
@@ -670,7 +670,7 @@ body, html {
   }
   #footer {
     position: absolute;
-    height: 300px;
+    max-height: 500px;
     align-content: center;
     margin-top: 10%;
     left: 50%;
