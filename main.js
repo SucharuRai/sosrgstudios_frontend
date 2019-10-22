@@ -21,22 +21,22 @@ $('#feature').inViewport(function(px) {
   }
 })
 
-$("#feature .content-left").inViewport(function(px) {
-  if(px > 0) {
-    $(this).addClass("leftEnter");
-  }
-  else{
-    $(this).removeClass("leftEnter");
-  }
-});
-$("#feature img").inViewport(function(px) {
-  if(px > 0) {
-    $(this).addClass("rightEnter");
-  }
-  else{
-    $(this).removeClass("rightEnter");
-  }
-});
+// $("#feature .content-left").inViewport(function(px) {
+//   if(px > 0) {
+//     $(this).addClass("leftEnter");
+//   }
+//   else{
+//     $(this).removeClass("leftEnter");
+//   }
+// });
+// $("#feature img").inViewport(function(px) {
+//   if(px > 0) {
+//     $(this).addClass("rightEnter");
+//   }
+//   else{
+//     $(this).removeClass("rightEnter");
+//   }
+// });
 
 $(".word1").inViewport(function(px) {
   if(px > 0) {
