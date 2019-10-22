@@ -59,10 +59,10 @@
         transform: translate(-50%, -60%);
       }
     }
-    #feature {
-      /* position:fixed;
+    /* #feature {
+       position:fixed;
       overflow-y:scroll;
-      overflow-x:hidden; */
+      overflow-x:hidden;
       position: relative;
       max-height: 50%;
     }
@@ -83,7 +83,7 @@
       width: 105%!important;
     }
     #feature .content-left span h2 {
-      /* transform: translate(50%, 50%); */
+      transform: translate(50%, 50%); 
       font-size: 2.2em;
       color: white;
       background-color: grey;
@@ -97,7 +97,7 @@
       margin-left: 10px;
       padding-left: 30px;
       color: white;
-    }
+    } */
     .leftEnter {
       animation: leftEnter 1.5s;
     }
