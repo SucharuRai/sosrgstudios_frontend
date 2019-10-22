@@ -7,23 +7,24 @@ body, html {
   color: white;
 }
 
-#hero-section #hero-back {
-  background-image: url('../assets/acting.jpg');
+#hero-section #hero-back img{
+  position: relative;
   opacity: 0.9;
   height: 100vh;
+  width: 100%;
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
 }
 #hero-section .description {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -60%);
   font-family: 'Roboto', sans-serif;
 }
 #hero-section .description .desc {
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
 #hero-section img {
   position: absolute;

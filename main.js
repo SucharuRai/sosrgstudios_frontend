@@ -63,6 +63,14 @@ $("#hero .content").inViewport(function(px) {
     $(this).removeClass("revealText");
   }
 });
+$("#hero-section .content").inViewport(function(px) {
+  if(px > 0) {
+    $(this).addClass("revealText");
+  }
+  else{
+    $(this).removeClass("revealText");
+  }
+});
 
 $(".service").inViewport(function(px) {
   if(px > 0) {
@@ -73,3 +81,22 @@ $(".service").inViewport(function(px) {
     $(this).addClass("opacityExit");
   }
 })
+$(".feature-section").inViewport(function(px) {
+  if(px > 0) {
+    $(this).removeClass("opacityExit");
+    $(this).addClass("opacityEnter");
+  } else {
+    $(this).removeClass("opacityEnter");
+    $(this).addClass("opacityExit");
+  }
+})
+
+  $("#work").inViewport(function(px) {
+    if(px > 0) {
+      $(this).removeClass("opacityExit");
+      $(this).addClass("opacityEnter");
+    } else {
+      $(this).removeClass("opacityEnter");
+      $(this).addClass("opacityExit");
+    }
+  })
