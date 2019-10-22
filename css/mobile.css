@@ -208,6 +208,11 @@
       padding: 15px 15px;
       font-size: 1.1rem;
     }
+
+    .service a {
+      color: white !important;
+    }
+    
     .service img {
       width: 100%;
       object-fit: cover;
@@ -314,7 +319,7 @@
     .welcome {
       top: 4900px;
       position: absolute;
-      background-image: url('assets/drawing.jpg');
+      background-image: url('../assets/drawing.jpg');
       background-size: cover;
       background-attachment: fixed;
       font-family: 'Roboto', sans-serif;

@@ -168,7 +168,7 @@
       position: absolute;
       /* display: inline-block; */
       line-height: 1em;
-      transform: translateY(-250px);
+      transform: translateY(-350px);
     }
     .word1 {
       z-index: 2;
@@ -312,6 +312,11 @@
       padding: 15px 15px;
       font-size: 1.1rem;
     }
+
+    .service a {
+      color: white !important;
+    }
+
     .service img {
       width: 100%;
       object-fit: cover;
@@ -323,7 +328,7 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     }
     .welcome {
-      background-image: url('assets/drawing.jpg');
+      background-image: url('../assets/drawing.jpg');
       background-size: cover;
       background-attachment: fixed;
       font-family: 'Roboto', sans-serif;
