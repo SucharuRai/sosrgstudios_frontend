@@ -336,7 +336,7 @@
       align-content: center;
       margin-bottom: 50px;
     }
-    .footer-google, .footer-twitter, .footer-facebook {
+    .footer-google, .footer-twitter, .footer-facebook, .footer-address-card {
       color: white;
       transform: scale(2);
       padding: 4px;
@@ -356,6 +356,11 @@
       padding: 4px;
       align-content: center;
       color: skyblue;
+    }
+    .footer-address-card:hover {
+      padding: 4px;
+      align-content: center;
+      color: red;
     }
     #footer .text {
       margin-top: 40px;
