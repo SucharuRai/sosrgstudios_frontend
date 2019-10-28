@@ -68,7 +68,7 @@ html {
 
 #feature-section .content-right img {
     overflow: hidden;
-    width: 100%;
+    width: 90%!important;
     height: 500px;
     clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 24% 50%);
     transition: clip-path 1s;
@@ -81,10 +81,11 @@ html {
 #feature-section .content-right p {
     margin-top: 20px;
     padding: 10px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     align-content: center;
     font-family: 'Lobster', cursive;
     color: white;
+    overflow-wrap: break-word;
 }
 
 #feature-section .content-right h1 {
