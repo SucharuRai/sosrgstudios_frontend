@@ -1,4 +1,4 @@
-@media (min-width: 1051px) {
+@media (min-width: 450px) {
     body {
       margin: 0px;
       overflow-x: hidden;
@@ -23,25 +23,129 @@
       top: 40%;
       transform: translate(-50%, -60%);
     }
+    #hero h1 {
+      text-align: center;
+      font-size: 5rem;
+    }
+    #hero h2 {
+      font-size: 2rem;
+    }
     #hero .bg-video {
       position: relative;
       right: 0;
       bottom: 0;
       left: 0px;
-      width: 100%!important;
+      width: 105%!important;
       padding: 0;
       /* margin-left: 0!important;
       margin-right: 0!important; */
     }
+    .revealText {
+      animation: revealText 2s;
+    }
+    @keyframes revealText {
+      0% {
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, 20px);
+      }
+      100% {
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -60%);
+      }
+    }
+    #feature {
+      /* position:fixed;
+      overflow-y:scroll;
+      overflow-x:hidden; */
+      position: relative;
+      max-height: 50%;
+    }
+    #feature img {
+      position: relative;
+      height: 250px;
+      top: -180px;
+      left: 95%;
+      transform: translateX(-50%);
+      opacity: 0.9;
+    }
+    #feature .content-left {
+      position: relative;
+      padding-left: 0!important;
+      padding-right: 0!important;
+      margin-left: 0!important;
+      margin-right: -50px!important;
+      width: 105%!important;
+    }
+    #feature .content-left span h2 {
+      /* transform: translate(50%, 50%); */
+      font-size: 2.2em;
+      color: white;
+      background-color: grey;
+      line-height: 100px;
+      padding-left: 100px;
+    }
+    #feature .content-left h3 {
+      max-width: 80%;
+      font-size: 2em;
+      font-family: 'Arimo', sans-serif;
+      margin-left: 10px;
+      padding-left: 30px;
+      color: white;
+    }
+    .leftEnter {
+      animation: leftEnter 1.5s;
+    }
+    .rightEnter {
+      animation: rightEnter 2s;
+    }
+    @keyframes leftEnter {
+      0% {
+        transform: translate(-200%);
+      }
+      50% {
+        transform: translate(-100%);
+      }
+    }
+    @keyframes rightEnter {
+      0% {
+        transform: translate(200%);
+      }
+      50% {
+        transform: translate(100%);
+      }
+    }
     #work {
       padding: 10px;
     }
-    #work h3 {
+    #work h1 {
+      font-size: 5rem;
+      font-family: 'Arimo', sans-serif;
+      text-align: center;
+    }
+    #work h2 {
       text-align: center;
       color: white;
       margin-top: 100px;
     }
-    
+    #work h1::after {
+      position: absolute;
+      left: 50%;
+      content: '';
+      width: 20%;
+      background-color: red;
+      height: 5px;
+      transform: translate(-50%, 100px);
+      transition: width 2s;
+    }
+    #work h1:hover::after {
+      width: 60%;
+    }
     #work .row {
       margin-top: 20px;
       display: flex;
@@ -64,7 +168,7 @@
       position: absolute;
       /* display: inline-block; */
       line-height: 1em;
-      transform: translateY(-350px);
+      transform: translateY(-250px);
     }
     .word1 {
       z-index: 2;
@@ -167,6 +271,12 @@
       opacity: 1;
       width: 90%;
     }
+    .service:hover {
+      /* box-shadow: 5px 5px #888888; */
+      /* box-shadow: 1px -1px 32px 1px rgba(255, 255, 255, 0.85);
+      opacity: 1;
+      transition: opacity 2s, box-shadow 2s; */
+    }
     .opacityEnter {
       animation: opacityEnter 2s;
     }
@@ -202,11 +312,6 @@
       padding: 15px 15px;
       font-size: 1.1rem;
     }
-
-    .service a {
-      color: white !important;
-    }
-
     .service img {
       width: 100%;
       object-fit: cover;
@@ -218,7 +323,7 @@
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
     }
     .welcome {
-      background-image: url('../assets/drawing.jpg');
+      background-image: url('assets/drawing.jpg');
       background-size: cover;
       background-attachment: fixed;
       font-family: 'Roboto', sans-serif;
@@ -235,10 +340,10 @@
       transform: translateX(-50%);
       color: white;
     }
-    .footer-google, .footer-twitter, .footer-facebook, .footer-address-card {
+    .footer-google, .footer-twitter, .footer-facebook {
       color: white;
       transform: scale(4);
-      padding: 4px;
+      /* padding: 4px; */
       margin-bottom: 50px;
       margin-right: 20px!important;
     }
@@ -256,11 +361,6 @@
       /* padding: 4px; */
       align-content: center;
       color: skyblue;
-    }
-    .footer-address-card:hover {
-      /* padding: 4px; */
-      align-content: center;
-      color: red;
     }
   }
   
