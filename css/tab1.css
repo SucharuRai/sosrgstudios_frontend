@@ -1,47 +1,84 @@
-@media (min-width: 1051px) {
+@media  (min-width: 450px) and (max-width: 1050px)
+{
     body {
       margin: 0px;
       overflow-x: hidden;
       background-color: #f2f2f2;
     }
-    #hero {
+    #hero-section {
       top: 0;
       bottom: 0;
       right: 0;
       position: relative;
     }
-    #hero h1, h2 {
-      font-family: 'Roboto', sans-serif;
-      color: white;
-      /* animation-name: revealText; */
-      animation-timing-function: linear;
+    #hero-section h1, p {
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        /* animation-name: revealText; */
+        animation-timing-function: linear;
+      }
+      #hero-section .content {
+        position: absolute;
+        text-align: center;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+      }
+      #hero-section h1 {
+        text-align: center;
+        font-size: 3.0rem;
+      }
+      #hero-section .description .desc {
+        font-size: 1.8rem;
+      }
+    .revealText {
+      animation: revealText 2s;
     }
-    #hero .content {
-      position: absolute;
-      text-align: center;
-      left: 50%;
-      top: 40%;
-      transform: translate(-50%, -60%);
+    @keyframes revealText {
+      0% {
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: 10%;
+        transform: translate(-50%, 20px);
+      }
+      100% {
+        position: absolute;
+        opacity: 1;
+        left: 50%;
+        top: 40%;
+        transform: translate(-50%, -40%);
+      }
     }
-    #hero .bg-video {
+    #feature-section {
       position: relative;
-      right: 0;
-      bottom: 0;
-      left: 0px;
-      width: 100%!important;
-      padding: 0;
-      /* margin-left: 0!important;
-      margin-right: 0!important; */
+      max-height: 50%;
+      background-color: transparent;
+      opacity: 0.95;
+    }
+    #feature-section .content-right img {
+      max-height: 350px!important;
+      clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 24% 50%);
+      transition: clip-path 1s;
+    }
+    #feature-section .content-right p {
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 2rem;
+      align-content: center;
+      font-family: 'Lobster', cursive;
+      color: white;
     }
     #work {
       padding: 10px;
+      background-color: transparent;
+      opacity: 0.95;
     }
     #work h3 {
       text-align: center;
       color: white;
       margin-top: 100px;
     }
-    
     #work .row {
       margin-top: 20px;
       display: flex;
@@ -55,21 +92,21 @@
     }
     .ml15 {
       font-weight: 800;
-      font-size: 3rem!important;
+      font-size: 2rem!important;
       text-transform: uppercase;
-      letter-spacing: 0.5em;
+      letter-spacing: 0.1em;
       color: white;
     }
     .ml15 .word1, .word2 {
       position: absolute;
       /* display: inline-block; */
       line-height: 1em;
-      transform: translateY(-350px);
+      transform: translateY(-250px);
     }
     .word1 {
       z-index: 2;
       position: absolute;
-      left: 22%;
+      left: 19%;
     }
     .slidein {
       animation: slidein 2s;
@@ -82,14 +119,13 @@
       }
       to {
         z-index: 2;
-        left: 22%;
         opacity: 1;
       }
     }
     .word2 {
       z-index: 2;
       position: absolute;
-      left: 63%;
+      left: 66%;
     }
     .slideout {
       animation: slideout 2s;
@@ -106,45 +142,8 @@
         float: right;
       }
     }
-    #studios {
-      position: relative;
-    }
-    #workid {
-      margin-top: 25px;
-    }
-    #workid h1 {
-      font-size: 3.5rem;
-      font-weight: 600;
-      letter-spacing: 0.3rem;
-      word-spacing: 0.5rem;
-      font-family: Arial, Helvetica, sans-serif;
-      text-align: center;
-      color: white;
-    }
-    #workid h1::after {
-      position: absolute;
-      margin-top: 15px;
-      left: 50%;
-      content: '';
-      width: 30%;
-      background-color: red;
-      height: 4px;
-      transform: translate(-50%, 50px);
-      transition: width 2s;
-    }
-    #workid h1:hover::after {
-      width: 60%;
-    }
     .out-card {
       padding: 60px;
-    }
-    .service {
-      border: none;
-      transition: box-shadow 0.6s ease-out;
-      box-shadow: 0.8px 0.9px 3px grey;
-      color: white;
-      background-color: transparent;
-      opacity: 0.5;
     }
     .card {
       background-color: transparent!important;
@@ -152,20 +151,6 @@
     .card:hover {
       /* box-shadow: 1px 8px 20px grey; */
       transition: box-shadow 0.6s ease-in;
-    }
-    .service-lg {
-      height: 550px !important;
-    }
-    .service-lg .title {
-      font-size: 3rem !important;
-    }
-    .service {
-      min-height: 500px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 1px -1px 32px 1px rgba(255, 255, 255, 0.85);
-      opacity: 1;
-      width: 90%;
     }
     .opacityEnter {
       animation: opacityEnter 2s;
@@ -181,7 +166,7 @@
         box-shadow: none;
       }
       50% {
-        opacity: 0.75;
+        opacity: 0.95;
       }
     }
     @keyframes opacityExit {
@@ -193,29 +178,10 @@
         opacity: 0.5;
       }
     }
-    .service .title {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-      font-family: 'Roboto', sans-serif;
-    }
-    .service .desc {
+    
+    .desc {
       padding: 15px 15px;
-      font-size: 1.1rem;
-    }
-
-    .service a {
-      color: white !important;
-    }
-
-    .service img {
-      width: 100%;
-      object-fit: cover;
-      clip-path: polygon(0 0, 100% 0%, 100% 80%, 0% 100%);
-      transition: clip-path 1s;
-      border-radius: 20px;
-    }
-    .service:hover img {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+      font-size: 1.8rem;
     }
     .welcome {
       background-image: url('../assets/drawing.jpg');
@@ -238,7 +204,7 @@
     .footer-google, .footer-twitter, .footer-facebook, .footer-address-card {
       color: white;
       transform: scale(4);
-      padding: 4px;
+      /* padding: 4px; */
       margin-bottom: 50px;
       margin-right: 20px!important;
     }
@@ -281,26 +247,77 @@
     background-color: rgba(247, 246, 246, 1) !important;
   }
   
-  /* ====================================================*/
-  @media (min-width: 1450px) {
+  /*=================================================*/
+@media  (min-width: 650px) and (max-width: 767px) {
     .word1 {
-      z-index: 2;
-      position: absolute;
-      left: 28%;
-    }
-    .slidein {
-      animation: slidein 2s;
+        z-index: 2;
+        position: absolute;
+        left: 23%;
+        }
+        .slidein {
+        animation: slidein 2s;
     }
     @keyframes slidein {
-      from {
-        z-index: 2;
-        left: 33%;
-        opacity: 0;
-      }
-      to {
-        z-index: 2;
-        left: 28%;
-        opacity: 1;
-      }
+        from {
+            z-index: 2;
+            left: 33%;
+            opacity: 0;
+        }
+        to {
+            z-index: 2;
+            opacity: 1;
+        }
     }
+}
+ /*=================================================*/
+
+ /*=================================================*/
+ @media  (min-width: 450px) and (max-width: 999px) {
+  #feature-section img {
+    display: none;
   }
+  }
+  /*=================================================*/
+@media  (min-width: 768px) and (max-width: 910px) {
+    .word1 {
+        z-index: 2;
+        position: absolute;
+        left: 25%;
+        }
+        .slidein {
+        animation: slidein 2s;
+    }
+    @keyframes slidein {
+        from {
+            z-index: 2;
+            left: 33%;
+            opacity: 0;
+        }
+        to {
+            z-index: 2;
+            opacity: 1;
+        }
+    }
+}
+  /*=================================================*/
+  @media  (min-width: 910px) and (max-width: 1050px) {
+    .word1 {
+        z-index: 2;
+        position: absolute;
+        left: 26%;
+        }
+        .slidein {
+        animation: slidein 2s;
+    }
+    @keyframes slidein {
+        from {
+            z-index: 2;
+            left: 33%;
+            opacity: 0;
+        }
+        to {
+            z-index: 2;
+            opacity: 1;
+        }
+    }
+}

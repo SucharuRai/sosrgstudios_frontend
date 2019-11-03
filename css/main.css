@@ -1,7 +1,223 @@
 @import url('https://fonts.googleapis.com/css?family=Arimo&display=swap');
-body, html {
-  overflow-x: hidden;
-  background-color: black !important;
-  color: white;
+@import url('https://fonts.googleapis.com/css?family=Fascinate+Inline|Lobster|Roboto&display=swap');
+body,
+html {
+    overflow-x: hidden;
+    background-color: black !important;
+    color: white;
 }
 
+#hero-section #hero-back img {
+    position: relative;
+    opacity: 0.9;
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#hero-section .description {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    font-family: 'Roboto', sans-serif;
+}
+
+#hero-section .description .desc {
+    font-size: 2rem;
+}
+
+#hero-section img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+}
+
+#godown {
+    position: absolute;
+    left: 50%;
+    /* transform: translate(0%, -50%);*/
+    transform: scale(3);
+    bottom: 5%;
+    animation: vibrate 2s infinite;
+}
+
+#godown a {
+    color: white;
+}
+
+@keyframes vibrate {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#feature-section .img-container {
+    padding: 0px !important;
+}
+
+#feature-section .content-right img {
+    overflow: hidden;
+    width: 90%!important;
+    height: 500px;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%, 24% 50%);
+    transition: clip-path 1s;
+}
+
+#feature-section .content-right:hover img {
+    clip-path: polygon(100% 0, 99% 100%, 36% 100%, 0 51%, 34% 0);
+}
+
+#feature-section .content-right p {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.7rem;
+    align-content: center;
+    font-family: 'Lobster', cursive;
+    color: white;
+    overflow-wrap: break-word;
+}
+
+#feature-section .content-right h1 {
+    padding: 10px;
+    font-size: 3rem;
+    margin: 10px 0px;
+    font-family: 'Fascinate Inline', cursive;
+    color: white;
+}
+
+#feature-section .content-right h1:after {
+    position: absolute;
+    content: '';
+    left: 30px;
+    top: 6rem;
+    width: 20%;
+    height: 2px;
+    border-style: solid;
+    border-color: rgb(241, 82, 8);
+    background-color: rgb(241, 82, 8);
+    transition: width 2s;
+}
+
+#feature-section .content-right:hover h1:after {
+    width: 40%;
+}
+
+#feature-section .content-left {
+    padding-left: 0px !important;
+    /* color: white;
+    background-image: linear-gradient(to right top, #ea5e5e, #f26b7e, #f67b9c, #f78db7, #f49fcf); */
+}
+
+#feature-section .content-left img {
+    width: 100%;
+    height: 500px;
+    clip-path: polygon(100% 0, 68% 49%, 100% 100%, 0% 100%, 0 0);
+    transition: clip-path 1s;
+}
+
+#feature-section .content-left:hover img {
+    clip-path: polygon(0 0, 71% 0, 100% 50%, 73% 100%, 0 100%);
+}
+
+#feature-section .content-left p {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 2rem;
+    align-content: center;
+    font-family: 'Lobster', cursive;
+}
+
+#feature-section .content-left h1 {
+    padding: 10px;
+    font-size: 3rem;
+    margin: 10px 0px;
+    font-family: 'Fascinate Inline', cursive;
+}
+
+#feature-section .content-left h1:after {
+    position: absolute;
+    content: '';
+    left: 30px;
+    top: 6rem;
+    width: 20%;
+    height: 2px;
+    border-style: solid;
+    border-color: rgb(241, 82, 8);
+    background-color: rgb(241, 82, 8);
+    transition: width 2s;
+}
+
+#feature-section .content-left:hover h1:after {
+    width: 40%;
+}
+
+nav {
+    float: left;
+    background-color: rgba(241, 82, 8, 1) !important;
+}
+
+.nav-item {
+    margin-right: 20px;
+}
+
+nav .connect {
+    background-color: rgb(241, 82, 8) !important;
+    color: white !important;
+}
+
+.nav-item a {
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+}
+
+
+/* Top and Bottom borders go out */
+
+.nav-item a:before,
+.nav-item a:after {
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 0;
+    transition: all 0.3s;
+}
+
+.nav-item a:before {
+    top: 0px;
+    transform: translateY(10px);
+}
+
+.nav-item a:after {
+    bottom: 0px;
+    transform: translateY(-1px);
+}
+
+.nav-item a:hover:before,
+.nav-item a:hover:after {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.7) !important;
+}

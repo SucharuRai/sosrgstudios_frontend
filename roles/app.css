@@ -1,0 +1,95 @@
+body, html {
+    background-color: black !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.site-title-container {
+    margin-top: 20px;
+    margin-bottom: 80px;
+}
+
+.site-title {
+    font-size: 6rem;
+    color: white;
+    text-align: center;
+}
+
+.site-title::after {
+    position: absolute;
+    content: '';
+    left: 50%;
+    width: 20%;
+    height: 2px;
+    border-style: solid;
+    border-color: rgb(241, 8, 183);
+    background-color: rgb(241, 8, 183);
+    transform: translateX(-50%);
+    transition: width 4s;
+}
+
+.site-title-container:hover .site-title:after {
+    width: 50%;
+}
+
+.role-container {
+    background-color: transparent;
+    padding: 20px;
+    color: white;
+    margin: 20px 10px;
+    opacity: 0.5;
+    box-shadow: none;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    transition: opacity 2s, box-shadow 3s;
+}
+
+.role-container:hover {
+    opacity: 1;
+    box-shadow: 3px 4px 35px 19px rgba(255, 255, 255, 1);
+}
+
+.role-container .role-title {
+    font-size: 5rem;
+}
+
+.role-container h1:after {
+    position: absolute;
+    content: '';
+    left: 50px;
+    /* top: 9rem; */
+    width: 20%;
+    height: 2px;
+    border-style: solid;
+    border-color: rgb(241, 82, 8);
+    background-color: rgb(241, 82, 8);
+    transition: width 4s;
+    transform: translateY(100px);
+}
+
+.role-container:hover h1:after {
+    width: 70%;
+}
+
+.role-container .role-description {
+    margin-top: 30px;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+    .site-title::after {
+        position: absolute;
+        top: 55%;
+    }
+
+    .role-container h1:after {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .site-title::after {
+        position: absolute;
+        top: 9rem;
+    }
+}
